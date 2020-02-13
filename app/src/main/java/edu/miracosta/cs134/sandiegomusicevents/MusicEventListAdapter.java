@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -41,7 +42,14 @@ public class MusicEventListAdapter extends ArrayAdapter<MusicEvent> {
         LayoutInflater inflater = (LayoutInflater) mContext.getSystemService(Activity.LAYOUT_INFLATER_SERVICE);
         View view = inflater.inflate(mResource, null);
 
+        // Wire up linear layout
+        LinearLayout musicEventListLinearLayout = view.findViewById(R.id.musicEventListLinearLayout);
+
         MusicEvent selectedEvent = mMusicEventList.get(position);
+
+        // Set linear layout tag to be selected music event
+        musicEventListLinearLayout.setTag(selectedEvent);
+
         // Inflate info about artist name and date
         TextView musicEventListTextView = view.findViewById(R.id.musicEventListTextView);
         musicEventListTextView.setText(selectedEvent.getArtist());
