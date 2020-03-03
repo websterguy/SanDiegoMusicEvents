@@ -15,7 +15,7 @@ import java.util.List;
 import edu.miracosta.cs134.sandiegomusicevents.model.JSONLoader;
 import edu.miracosta.cs134.sandiegomusicevents.model.MusicEvent;
 
-public class MainActivity extends AppCompatActivity {
+public class    MainActivity extends AppCompatActivity {
 
     private List<MusicEvent> eventsList;
     MusicEventListAdapter mMusicEventListAdapter;

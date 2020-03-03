@@ -56,8 +56,8 @@ public class JSONLoader {
                 event.setState(musicEventJSON.getString("State"));
                 event.setImageName(musicEventJSON.getString("ImageName"));
 
-            allMusicEvents.add(event);
-        }
+                allMusicEvents.add(event);
+            }
         }
         catch (JSONException e)
         {
